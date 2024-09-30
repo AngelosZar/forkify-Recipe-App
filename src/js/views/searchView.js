@@ -6,7 +6,6 @@ class SearchView {
     if (!query.trim()) {
       return null;
     }
-    const query = this._parentEl.querySelector('.search__field').value;
     this._clearInput();
     return query;
   }
