@@ -83,23 +83,44 @@
     font-weight: 600;
   }
 
-  &__user-generated {
-    background-color: darken($color-grey-light-2, 2%);
+  // &__user-generated {
+  //   background-color: darken($color-grey-light-2, 2%);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 10rem;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   height: 2rem;
+  //   width: 2rem;
+  //   border-radius: 10rem;
 
-    margin-left: auto;
-    margin-right: 1.75rem;
+  //   margin-left: auto;
+  //   margin-right: 1.75rem;
 
-    svg {
-      height: 1.2rem;
-      width: 1.2rem;
-      fill: $color-primary;
+  //   svg {
+  //     height: 1.2rem;
+  //     width: 1.2rem;
+  //     fill: $color-primary;
+  //   }
+  // }
+  .preview {
+    &__user-generated {
+      background-color: color.scale($color-grey-light-2, $lightness: -2%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 10rem;
+
+      margin-left: auto;
+      margin-right: 1.75rem;
+
+      svg {
+        height: 1.2rem;
+        width: 1.2rem;
+        fill: $color-primary;
+      }
     }
   }
 }
