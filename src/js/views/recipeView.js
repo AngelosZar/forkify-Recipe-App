@@ -2,8 +2,8 @@ import View from './view.js';
 
 // import icons from '../img/icons.svg'; // Parcel 1
 import icons from 'url:../../img/icons.svg'; // Parcel 2
-// import { fraction } from 'fractional';
-import { Fraction } from 'fractional';
+import Fractional from 'fractional'; //
+const Fraction = Fractional.Fraction; //
 
 class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
