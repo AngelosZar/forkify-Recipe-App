@@ -4,10 +4,15 @@
   "description": "Recipe-Application",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "clean": "rm -rf dist/ .parcel-cache/",
+    "dev": "parcel index.html --open"
   },
   "author": "Angelos Z",
   "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.12.0",
     "parcel": "^2.12.0",
@@ -17,5 +22,6 @@
     "core-js": "^3.38.1",
     "fractional": "^1.0.0",
     "regenerator-runtime": "^0.14.1"
-  }
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
