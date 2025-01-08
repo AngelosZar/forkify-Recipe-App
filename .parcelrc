@@ -2,18 +2,17 @@
   "extends": "@parcel/config-default",
   "optimizers": {
     "*.svg": [
-      "@parcel/optimizer-svgo"
-    ],
-    "...": [
-      "..."
-    ]
-  },
-  "svgo": {
-    "plugins": [
       {
-        "name": "preset-default"
-      },
-      "cleanupIDs"
+        "name": "@parcel/optimizer-svgo",
+        "options": {
+          "plugins": [
+            {
+              "name": "preset-default"
+            },
+            "cleanupIDs"
+          ]
+        }
+      }
     ]
   }
 }
