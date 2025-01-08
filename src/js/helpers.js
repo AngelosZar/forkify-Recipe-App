@@ -65,3 +65,33 @@ export const sendJSON = async function (url, uploadData) {
   }
 };
 */
+export function convertToFraction(decimal) {
+  if (!decimal) return '';
+
+  if (Number.isInteger(decimal)) return decimal.toString();
+
+  const fractionMap = {
+    0.25: '1/4',
+    0.5: '1/2',
+    0.75: '3/4',
+    0.33: '1/3',
+    0.67: '2/3',
+    0.2: '1/5',
+    0.4: '2/5',
+    0.6: '3/5',
+    0.8: '4/5',
+  };
+
+  const rounded = Math.round(decimal * 100) / 100;
+
+  const wholePart = Math.floor(rounded);
+  const decimalPart = rounded - wholePart;
+
+  if (fractionMap[decimalPart.toFixed(2)]) {
+    return wholePart
+      ? `${wholePart} ${fractionMap[decimalPart.toFixed(2)]}`
+      : fractionMap[decimalPart.toFixed(2)];
+  }
+
+  return rounded.toString();
+}
